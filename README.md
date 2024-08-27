@@ -14,19 +14,30 @@ TaskMaster Pro est une application web de gestion des tâches, conçue pour vous
 
    git clone https://github.com/Dralis63/TaskMasterPro.git
 
-    Accédez au répertoire du projet :
+2. **Déplacez le répertoire** cloné dans le répertoire de votre serveur Apache. Le chemin dépend de votre système d'exploitation. Par exemple :
 
-    bash
+    Sur Linux : /var/www/html/
+    Sur Windows (avec WAMP) : C:\wamp64\www\
+    Sur MacOS (avec MAMP) : /Applications/MAMP/htdocs/
 
-    cd TaskMasterPro
+bash
 
-    Ouvrez index.html dans votre navigateur préféré pour commencer à utiliser l'application.
+mv TaskMasterPro /var/www/html/
 
-2. Technologies Utilisées
+Démarrez le serveur Apache. Sur un système Linux, vous pouvez utiliser la commande suivante :
 
-    HTML
-    CSS (avec Bootstrap)
-    JavaScript (avec jQuery)
+bash
+
+sudo service apache2 start
+
+    Sur Windows, lancez WAMP et démarrez tous les services.
+    Sur MacOS, lancez MAMP et démarrez les serveurs.
+
+Ouvrez votre navigateur et accédez à l'application en utilisant l'URL suivante :
+
+bash
+
+http://localhost/TaskMasterPro/index.html
 
 3. Contribuer
 
