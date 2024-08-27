@@ -9,6 +9,9 @@ TaskMaster Pro est une application web de gestion des tâches, conçue pour vous
 - **Interface utilisateur responsive** : Profitez d'une expérience utilisateur fluide sur tous les appareils, y compris les ordinateurs de bureau, les tablettes et les smartphones.
 
 ## Installation
+- https://dralis63.github.io/TaskMasterPro/
+
+ou en local :
 
 1. **Clonez le dépôt** sur votre machine locale :
 
