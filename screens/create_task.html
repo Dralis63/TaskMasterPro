@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro - Nouvelle Tâche</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <nav nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../assets/img/logo.png" alt="TaskMaster Pro" style="width: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="create_task.html">Nouvelle Tâche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h2>Créer une Nouvelle Tâche</h2>
+        <p class="text-muted">Ajoutez une nouvelle tâche à votre liste en remplissant les informations ci-dessous.</p>
+        <form id="taskForm">
+            <div class="mb-3">
+                <label for="taskTitle" class="form-label">Titre de la Tâche</label>
+                <input type="text" class="form-control" id="taskTitle" placeholder="Ex. : Réviser le rapport annuel" required>
+            </div>
+            <div class="mb-3">
+                <label for="taskDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="taskDescription" rows="3" placeholder="Détails de la tâche" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="taskDate" class="form-label">Date d'échéance</label>
+                <input type="date" class="form-control" id="taskDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="taskPriority" class="form-label">Priorité</label>
+                <select class="form-select" id="taskPriority" required>
+                    <option value="Haute">Haute</option>
+                    <option value="Moyenne">Moyenne</option>
+                    <option value="Basse">Basse</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-save me-2"></i> Ajouter Tâche</button>
+        </form>
+        <div class="mt-5">
+            <h5>Conseils pour bien organiser vos tâches :</h5>
+            <ul class="list-group">
+                <li class="list-group-item">Priorisez vos tâches selon leur importance.</li>
+                <li class="list-group-item">Fixez des échéances réalistes pour éviter le stress.</li>
+                <li class="list-group-item">Décomposez les tâches complexes en étapes plus petites.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

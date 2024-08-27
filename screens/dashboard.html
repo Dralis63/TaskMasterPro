@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro - Tableau de Bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../assets/img/logo.png" alt="TaskMaster Pro" style="width: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create_task.html">Nouvelle Tâche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="dashboard-page">
+    <div class="container my-5">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Tâches Terminées</div>
+                    <div class="card-body">
+                        <h5 class="card-title">0</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">Tâches En Cours</div>
+                    <div class="card-body">
+                        <h5 class="card-title">0</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-header">Tâches À Venir</div>
+                    <div class="card-body">
+                        <h5 class="card-title">0</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="mb-4">Mes Tâches</h2>
+                <div id="taskList" class="list-group">
+                    <!-- Les tâches seront insérées ici -->
+                </div>
+                <a href="create_task.html" class="btn btn-success mt-4 d-flex align-items-center"><i class="fas fa-plus me-2"></i> Nouvelle Tâche</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Fenêtre Modale pour l'édition des tâches -->
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editTaskModalLabel">Modifier la Tâche</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="editTaskForm">
+              <div class="mb-3">
+                <label for="editTaskTitle" class="form-label">Titre de la Tâche</label>
+                <input type="text" class="form-control" id="editTaskTitle" required>
+              </div>
+              <div class="mb-3">
+                <label for="editTaskDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="editTaskDescription" rows="3" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="editTaskDate" class="form-label">Date d'échéance</label>
+                <input type="date" class="form-control" id="editTaskDate" required>
+              </div>
+              <div class="mb-3">
+                <label for="editTaskPriority" class="form-label">Priorité</label>
+                <select class="form-select" id="editTaskPriority" required>
+                  <option value="Haute">Haute</option>
+                  <option value="Moyenne">Moyenne</option>
+                  <option value="Basse">Basse</option>
+                </select>
+              </div>
+              <input type="hidden" id="editTaskIndex">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-primary" id="saveTaskChanges">Enregistrer les modifications</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
