@@ -154,7 +154,9 @@ p {
 }
 
 .img-fluid {
-    border-radius: 50%;
+    border-radius: 10px;
+    height: 300px;
+    width: 100%;
 }
 
 .task-border-avenir {
